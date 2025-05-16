@@ -1,0 +1,20 @@
+name = "piv-mtls-worker"
+main = "piv-mtls-worker.js"
+compatibility_date = "2023-05-18"
+compatibility_flags = ["nodejs_compat"]
+# Add your account_id here before deployment
+
+[env.production]
+routes = [
+  # Define your routes here, example:
+  # { pattern = "example.com/*", zone_name = "example.com" }
+]
+
+[env.staging]
+routes = [
+  # Define your staging routes here, example:
+  # { pattern = "staging.example.com/*", zone_name = "example.com" }
+]
+
+# Note: mTLS configuration needs to be set up in the Cloudflare dashboard
+# under SSL/TLS > Client Certificates
